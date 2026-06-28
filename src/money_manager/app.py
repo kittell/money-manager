@@ -5,6 +5,8 @@ from typing import Any, Dict
 import os
 import json
 
+from .ui import UserInterface
+
 class Application:
     '''Main class that handles operation of app
     '''
@@ -37,4 +39,8 @@ class Application:
         return
 
     def run(self):
+        return
+
+    def user_interface(self):
+        ui = UserInterface(self)
         return
