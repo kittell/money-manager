@@ -11,8 +11,11 @@ class Application:
     '''Main class that handles operation of app
     '''
 
+    _name: str = 'Money Manager'
+
     def __init__(self):
         self.config: Dict[str, Any] = {}
+        self.account_manager = AccountManager()
 
         self._load_config()
         return
@@ -39,8 +42,38 @@ class Application:
         return
 
     def run(self):
+        '''Run the application
+        '''
+        self.user_interface()
         return
 
     def user_interface(self):
         ui = UserInterface(self)
+        return
+
+
+class AccountManager:
+    '''Maintain a portfolio of bank accounts
+    '''
+    def __init__(self):
+        return
+    
+    def load_accounts(self):
+        '''Load accounts from file
+        '''
+        return
+    
+    def add_account(self):
+        '''Add a new account to the portfolio
+        '''
+        return
+    
+    def open_account(self):
+        '''Set account status to Open
+        '''
+        return
+    
+    def close_account(self):
+        '''Set account status to Closed
+        '''
         return
